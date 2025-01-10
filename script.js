@@ -570,7 +570,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
- 
+ /*------------------------------------------------------------*/
   let isHeadingVisible = false; // Track whether the heading is currently visible
 
   document.addEventListener("scroll", function () {
@@ -590,6 +590,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   
+
+  const strings = ["TOKEN", "PAYMENT"];
+    const typedElement = document.getElementById("typed");
+    let currentIndexpage = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+      const currentString = strings[currentIndexpage];
+      const typingSpeed = isDeleting ? 80 : 150; // Smoother speed adjustments
+
+      if (!isDeleting) {
+        charIndex++;
+        typedElement.textContent = currentString.slice(0, charIndex);
+
+        if (charIndex === currentString.length) {
+          isDeleting = true;
+          setTimeout(type, 2000); // Hold before deleting
+          return;
+        }
+      } else {
+        charIndex--;
+        typedElement.textContent = currentString.slice(0, charIndex);
+
+        if (charIndex === 0) {
+          isDeleting = false;
+          currentIndexpage = (currentIndexpage + 1) % strings.length; // Move to next string
+        }
+      }
+
+      setTimeout(type, typingSpeed);
+    }
+
+    type();
+    
+
 
   
   
