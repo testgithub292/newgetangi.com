@@ -1334,6 +1334,16 @@ body {
 
 
 
+.strik_problem{
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
+}
+
 .strik_one{
   font-size: 50px;
   font-family: 'Times New Roman', Times, serif;
@@ -1348,12 +1358,19 @@ body {
   .strik_one{
     font-size: 40px;
   }
+  .strik_problem{
+    font-size: 30px;
+  }
 }
 @media (max-width: 400px) {
   .strik_one{
     font-size: 35px;
   }
+  .strik_problem{
+    font-size: 25px;
+  }
 }
+
 
 
 
@@ -1437,4 +1454,216 @@ body {
   width: 100px;
   height: 100px;
   transform: translate(0, 0);
+}
+
+
+
+/*=====================================================================*/
+
+.break-body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container-break {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;  /* Ensures both image and content take the same height */
+  justify-content: space-between;
+  padding: 20px;
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp-break 1s ease-out forwards;
+}
+
+@keyframes fadeInUp-break {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-content-break {
+  flex: 1;
+  min-width: 200px;
+  margin-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  animation: fadeInRight 1s ease-out forwards 0.5s;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.text-content-break h2 {
+  font-size: 2.5rem;
+  margin: 0 0 10px;
+}
+
+.text-content-break p {
+  font-size: 1rem;
+  color: black;
+}
+
+.modern-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 10px; /* Add bottom margin to separate the links */
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.modern-link:hover {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+
+.modern-link:active {
+  color: #003366;
+}
+
+.image-content-break {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInLeft 1s ease-out forwards 0.5s;
+  height: 100%;  /* Ensure the image container adjusts based on content */
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.image-content-break img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Set a max-height for the image */
+  object-fit: contain; /* Ensure the image is contained within the specified height */
+  border-radius: 8px;
+}
+@media (max-width: 350px) {
+  .break-body {
+  width: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .container-break {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content-break h2 {
+    font-size: 1.5rem;
+    margin-top: 20px !important;
+    margin: 0 0 10px;
+  }
+
+  .text-content-break {
+    margin: 0 0 20px;
+    
+  }
+
+  .modern-link {
+    margin-top: 15px;
+  }
+
+  .image-content-break img {
+    width: 100%; /* Ensure the image fits on smaller screens */
+    height: auto;
+    max-height: 300px; /* Reduce the max-height for smaller screens */
+  }
+}
+
+
+/*----------------------------------------------*/
+
+/*======================++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+.timeline-dot {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #007acc;
+  border-radius: 50%;
+  border: 3px solid #f4f4f9;
+  margin-right: 20px;
+}
+
+.timeline-content {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+}
+
+.timeline-content h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #007acc;
+}
+
+.timeline-content p {
+  margin: 5px 0 0;
+  font-size: 16px;
 }
