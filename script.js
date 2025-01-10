@@ -101,7 +101,136 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(document.getElementById('heading_section3'));
         observer.observe(document.getElementById('content_section3'));*/
 
+        const wcards = document.querySelectorAll('.menu_item');
 
+        const withoutscrollobserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show'); // Remove for repeated animations
+                }
+            });
+        }, {
+            threshold: 0.5 // 50% of the card must be visible
+        });
+        
+        wcards.forEach(card => withoutscrollobserver.observe(card));
+        
+         /*---------------------------------------------------------------------------*/
+
+  const progressBar = document.querySelector('.progress.supply');
+  const popup = document.querySelector('.popup.supply');
+
+  const animateGrowth = () => {
+      let growthPercentage = 0;
+      const maxGrowthSteps = [20, 40, 60];
+      let currentStep = 0;
+      const colors = ['#4caf50', '#ff5722', '#2196f3'];
+
+      const interval = setInterval(() => {
+          growthPercentage++;
+          progressBar.style.width = growthPercentage + '%';
+          progressBar.textContent = Math.floor((growthPercentage / 100) * 250) + 'M';
+
+          if (growthPercentage >= maxGrowthSteps[currentStep]) {
+              progressBar.style.backgroundColor = colors[currentStep];
+
+              popup.textContent = `Reached ${Math.floor((maxGrowthSteps[currentStep] / 100) * 250)}M Supply!`;
+              popup.style.display = 'block';
+
+              setTimeout(() => {
+                  popup.style.display = 'none';
+              }, 500);
+
+              currentStep++;
+
+              if (currentStep === maxGrowthSteps.length) {
+                  clearInterval(interval);
+              }
+          }
+      }, 50);
+  };
+
+  const observersupply = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              animateGrowth();
+          }
+      });
+  });
+
+  observersupply.observe(document.querySelector('.progress-bar.supply'));
+
+
+  //--========================================================================================
+
+// Set the date we're counting down to
+const targetDate = new Date("2025-04-01T00:00:00").getTime();
+
+// If there's a saved time in localStorage, use that; otherwise, calculate it
+let savedTime = localStorage.getItem("countdownEndTime");
+if (!savedTime) {
+    savedTime = targetDate;
+    localStorage.setItem("countdownEndTime", savedTime);
+}
+
+// Update the countdown every 1 second
+const interval = setInterval(function() {
+    // Get the current time
+    const now = new Date().getTime();
+
+    // Calculate the distance between now and the target date
+    const distance = savedTime - now;
+
+    // Time calculations
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the respective elements
+    document.getElementById("days").textContent = `${days}d`;
+    document.getElementById("hours").textContent = `${hours}h`;
+    document.getElementById("minutes").textContent = `${minutes}m`;
+    document.getElementById("seconds").textContent = `${seconds}s`;
+
+    // If the countdown is over, display a message
+    if (distance < 0) {
+        clearInterval(interval);
+        document.querySelector(".message").textContent = "Presale has ended!";
+        document.querySelector(".countdown").style.display = "none";
+        localStorage.removeItem("countdownEndTime");  // Remove saved time after countdown ends
+    }
+}, 1000);
+
+
+//=========================================================================================
+
+function toggleClubContent(contentId) {
+    // Hide all content cards
+    document.querySelectorAll('.club-content-card').forEach(content => {
+        content.classList.remove('active');
+    });
+
+    // Show the selected content card
+    const selectedContent = document.getElementById(contentId);
+    if (selectedContent) {
+        selectedContent.classList.add('active');
+    }
+}
+
+// Hide content when clicking outside the card
+document.addEventListener('click', function(event) {
+    const container = document.getElementById('club-container');
+    if (!container.contains(event.target)) {
+        document.querySelectorAll('.club-content-card').forEach(content => {
+            content.classList.remove('active');
+        });
+    }
+});
+
+        
 
 
         /*-------------------------------------------*/
@@ -552,3 +681,224 @@ function toggleProblemContent(id) {
   // Observe the card for animation
   observersection2.observe(document.getElementById('problem-card-inner'));
 
+
+
+  //---------------**********************************************************
+
+
+  
+     // JavaScript for Dropdown Toggle
+     document.addEventListener("DOMContentLoaded", () => {
+        const learnMoreBtn = document.querySelector(".learn-more-btn");
+        const dropdownContent = document.querySelector(".dropdown-content");
+  
+        learnMoreBtn.addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent default link behavior
+          dropdownContent.classList.toggle("show");
+        });
+  
+        document.addEventListener("click", (e) => {
+          // Hide dropdown if clicking outside the card
+          if (!dropdownContent.contains(e.target) && !learnMoreBtn.contains(e.target)) {
+            dropdownContent.classList.remove("show");
+          }
+        });
+      });
+
+
+      //=========================================================================
+
+      const toggleBtnInvestorGain = document.getElementById("toggleBtn-investor-gain");
+      const hiddenContentInvestorGain = document.getElementById("hiddenContent-investor-gain");
+      const cardInvestorGain = document.getElementById("card-investor-gain");
+  
+      toggleBtnInvestorGain.addEventListener("click", () => {
+        hiddenContentInvestorGain.classList.toggle("visible-investor-gain");
+        toggleBtnInvestorGain.textContent = hiddenContentInvestorGain.classList.contains("visible-investor-gain")
+          ? "Show Less"
+          : "Show More";
+      });
+  
+      // Hide/Show content by clicking anywhere on the page
+      document.addEventListener("click", (event) => {
+        if (!cardInvestorGain.contains(event.target)) {
+          hiddenContentInvestorGain.classList.remove("visible-investor-gain");
+          toggleBtnInvestorGain.textContent = "Show More";
+        }
+      });
+
+      /*-----------------------------------------------*/
+
+      const observersupport = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const section = document.querySelector('.support-small-section');
+    observersupport.observe(section);
+
+    /*==========================================================*/
+
+    //======================================================================
+
+    document.addEventListener('click', function(event) {
+        const hiddenContent = document.getElementById('hiddenContent');
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        const card = document.querySelector('.card');
+    
+        // Check if hidden content is expanded
+        if (hiddenContent.classList.contains('expanded')) {
+            // Check if click is outside card
+            if (!card.contains(event.target)) {
+                hiddenContent.classList.remove('expanded');
+                showMoreBtn.textContent = 'Show More';
+            }
+        }
+    });
+    
+    // Prevent click inside card from triggering the document click
+    document.getElementById('showMoreBtn').addEventListener('click', function(event) {
+        event.stopPropagation();
+        const hiddenContent = document.getElementById('hiddenContent');
+        hiddenContent.classList.toggle('expanded');
+        this.textContent = hiddenContent.classList.contains('expanded') ? 'Show Less' : 'Show More';
+    });
+    
+    // Add touch feedback
+    document.querySelectorAll('.info-card').forEach(card => {
+        card.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+        });
+    
+        card.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+
+
+
+     /*================================================================*/
+
+     const section9GrowthElement = document.getElementById('section9-growth');
+     const section9YearElement = document.getElementById('section9-year');
+     const section9Container = document.getElementById('section9-growthContainer');
+ 
+     let section9Growth = 33;
+     let section9Year = 2024;
+ 
+     const section9TargetGrowth = 67;
+     const section9TargetYear = 2028;
+ 
+     const section9Milestones = [40, 50, 60, 67]; // The growth milestones
+     const section9Years = [2025, 2026, 2027, 2028]; // The corresponding years
+     let section9MilestoneIndex = 0;
+     let section9Interval;
+ 
+     let section9IsAnimationComplete = false;  // Track if the animation has completed
+ 
+     function section9UpdateGrowthAndYear() {
+       if (section9MilestoneIndex < section9Milestones.length && !section9IsAnimationComplete) {
+         const section9TargetGrowthForStep = section9Milestones[section9MilestoneIndex];
+         const section9TargetYearForStep = section9Years[section9MilestoneIndex];
+ 
+         section9Interval = setInterval(() => {
+           if (section9Growth < section9TargetGrowthForStep) {
+             section9Growth++;
+             section9GrowthElement.textContent = `$${section9Growth} Billion`;
+           }
+ 
+           if (section9Year < section9TargetYearForStep) {
+             section9Year++;
+             section9YearElement.textContent = section9Year;
+           }
+ 
+           if (section9Growth >= section9TargetGrowthForStep && section9Year >= section9TargetYearForStep) {
+             clearInterval(section9Interval);
+             section9MilestoneIndex++;
+             if (section9MilestoneIndex < section9Milestones.length) {
+               setTimeout(section9UpdateGrowthAndYear, 1000);
+             }
+           }
+ 
+           if (section9Growth === section9TargetGrowth && section9Year === section9TargetYear) {
+             section9TriggerFinalAnimation();
+             section9IsAnimationComplete = true;
+           }
+ 
+         }, 50);
+       }
+     }
+ 
+     function section9TriggerFinalAnimation() {
+       section9Container.classList.add('section9-final-animation');
+     }
+ 
+     function section9ResetAnimation() {
+       if (!section9IsAnimationComplete) {
+         section9Container.classList.remove('section9-final-animation');
+         section9Growth = 33;
+         section9Year = 2024;
+         section9GrowthElement.textContent = `$${section9Growth} Billion`;
+         section9YearElement.textContent = section9Year;
+       }
+     }
+ 
+     const section9Observer = new IntersectionObserver((entries) => {
+       entries.forEach(entry => {
+         if (entry.isIntersecting && !section9IsAnimationComplete) {
+           section9UpdateGrowthAndYear();
+           section9TriggerFinalAnimation();
+         } else if (!entry.isIntersecting && !section9IsAnimationComplete) {
+           section9ResetAnimation();
+         }
+       });
+     }, { threshold: 0.5 });
+ 
+     section9Observer.observe(section9Container);
+
+     
+
+     /*------------------------------------------------------------*/
+
+     gsap.registerPlugin(ScrollTrigger);
+
+     const section10CardsContainer = document.getElementById("section10CardsContainer");
+ 
+     gsap.to(section10CardsContainer, {
+       x: () => -(section10CardsContainer.scrollWidth - window.innerWidth), // Moves the cards horizontally
+       ease: "none",
+       scrollTrigger: {
+         trigger: "#section10CardsWrapper", // Trigger the scroll animation
+         start: "top top", // Start when top of wrapper hits top of viewport
+         end: () => `+=${section10CardsContainer.scrollWidth}`, // Dynamic end based on container width
+         pin: true, // Pin the cardsWrapper during scroll
+         scrub: 0.5, // Smooth scrolling
+         invalidateOnRefresh: true, // Adjusts on resize
+       },
+     });
+ 
+     //------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------
+ 
+     document.addEventListener('DOMContentLoaded', function () {
+         const closeModalLink = document.querySelector('.close-modal');
+         const modalElement = document.getElementById('section_7_modal');
+     
+         closeModalLink.addEventListener('click', function (e) {
+           e.preventDefault(); // Stop immediate navigation
+     
+           // Close the modal
+           const modalInstance = bootstrap.Modal.getOrCreateInstance(modalElement);
+           modalInstance.hide();
+     
+           // Navigate to the href after the modal is fully hidden
+           modalElement.addEventListener('hidden.bs.modal', function () {
+             window.location.href = closeModalLink.getAttribute('href');
+           }, { once: true }); // Use `once` to ensure this is only executed once
+         });
+       });
