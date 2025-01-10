@@ -1,0 +1,1045 @@
+.navbarcolorstyle{
+
+    background-color: whitesmoke;
+  }
+  #navbarcolorstyle{
+  background-color: whitesmoke;
+  }
+  
+  #textstyle{
+    font-size: 17px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #accountDropdown{
+    font-size: 17px;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  }
+  #servicesDropdown{
+    font-size: 17px;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  }
+  #navbarDropdown{
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+  #offcanvasNavbarDropdown{
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #dropdownitemcolor{
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .navbar-toggler-icon{
+    background-color: aliceblue;
+    border-radius: 3px;
+    
+  }
+
+  .bytokenbtnnav2{
+    display: none !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bytokenbtnnav{
+  margin-right: 15px !important;
+}
+
+
+  
+  .nav-link.dropdown-toggle::after {
+      display: none;
+  }
+  #contact_bt_css{
+    height: fit-content;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+    margin-right: 0px;
+    margin-top: 20px;
+    --color: black;
+  font-family: 'Times New Roman', Times, serif;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid #ffd700;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: var(--color);
+  }
+  #contact_bt_css:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  #contact_bt_css:hover {
+    color: white;
+    border: 2px solid #32cd32;
+  }
+  
+  #contact_bt_css:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  #contact_bt_css:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  #contact_bt_css:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+  }
+  
+ 
+  
+  @media (max-width: 1200px) {
+  
+      .navbar-toggler {
+         color: black !important;
+        }
+        .bytokenbtnnav2{
+          display: block !important;
+          margin-top: 0px !important;
+      }
+  }
+
+  /* Hide the submenu by default */
+  .dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: -5px;
+  }
+  
+  /* Show the submenu on hover */
+  .dropdown-submenu:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Optional styling */
+  .dropdown-submenu {
+    position: relative;
+  }
+  body{
+    background-color: #e6e6e6 !important;
+  }
+  
+  /*--------------------------------------------------------------------------*/
+
+/*---Footer css--------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------*/
+.site-footer {
+    background-color: whitesmoke;
+    color: black;
+    padding: 40px 0 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-links, .footer-contact {
+    flex-basis: 45%;
+  }
+  
+  .footer-links h3, .footer-contact h3 {
+    margin-bottom: 20px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: black;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    opacity: 0.8;
+  }
+  
+  .footer-contact form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-contact input,
+  .footer-contact textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .footer-contact button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-contact button:hover {
+    background-color: rgba(0, 0, 0, 0.555);
+    color: whitesmoke;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icon {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.151);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background-color: rgba(0, 0, 0, 0.363);
+  }
+  
+  .footer-legal {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .legal-link {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .legal-link:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+    
+    .footer-links, .footer-contact {
+      flex-basis: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .footer-social, .footer-legal {
+      justify-content: center;
+    }
+  }
+  
+  .social-icon.fa-tiktok {
+    font-size: 22px; /* TikTok icon ko thoda chota kar diya */
+  }
+  /* top icon css--------------------------------------------------------------------
+  -----------------------------------------------------------------------------------------*/
+  
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  
+  #scrollTopBtn:hover {
+    background-color: #333;
+  }
+  
+  #scrollTopBtn i {
+    font-size: 30px;
+  }
+  
+  
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+  }
+  
+  #scrollTopBtn:before,
+  #scrollTopBtn:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 7px;
+  }
+  
+  #scrollTopBtn:before {
+    border: 4px solid #f0eeef;
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+      transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+  }
+  
+  #scrollTopBtn:after {
+    border: 4px solid #96daf0;
+    transform: scale(1.3);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+      transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+  }
+  
+  #scrollTopBtn:hover:before,
+  #scrollTopBtn:focus:before {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+      transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  #scrollTopBtn:hover:after,
+  #scrollTopBtn:focus:after {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+      transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+  }
+  
+  #scrollTopBtn-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  #scrollTopBtn-elem {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 17px 18px 0 18px;
+    transform: rotate(180deg);
+    fill: #f0eeef;
+  }
+  
+  #scrollTopBtn:hover #scrollTopBtn-box,
+  #scrollTopBtn:focus #scrollTopBtn-box {
+    transition: 0.4s;
+    transform: translateX(-56px);
+  }
+
+  /*---------by token css ------------------------*/
+.contact_bt_css{
+    height: fit-content;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+    margin-right: 20px;
+    margin-top: 0px;
+    --color: black;
+  
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid #ffd700;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: var(--color);
+  }
+  .contact_bt_css:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  .contact_bt_css:hover {
+    color: white;
+    border: 2px solid #32cd32;
+  }
+  
+  .contact_bt_css:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  .contact_bt_css:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  .contact_bt_css:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+  }
+  
+
+/* pragraph ---------------------------------*/
+
+#infoParagraphbg{
+    margin-top: 20px;
+    padding: 10px 40px;
+    background-color: #e6e6e6;
+  }
+  .info-paragraph {
+    line-height: 35px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (max-width: 600px) {
+    .step {
+        font-size: 14px;
+    }
+  
+    .info-paragraph {
+      text-align: left;
+      padding: 15px 0px;
+    }
+  }
+  
+  /*---download link */
+
+  .googledrivelink{
+    text-align: center !important;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .download-button {
+    padding: 10px 20px;
+    color: white;
+    background-color:#4B0082; /* Green background */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.download-button:hover {
+    background-color: #4c0082c7; /* Darker green on hover */
+}
+
+
+ 
+
+/* so far so good------------------------------------------------------------ */
+
+.sessions, .litagtimeline {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  margin-top: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  background: linear-gradient(to right, rgb(236, 236, 236), #d3d3d3, rgba(245, 222, 179, 0.486)); 
+  padding: 3rem 0;
+}
+
+.wrapper {
+  background: #eaf6ff;
+  padding: 2rem;
+  border-radius: 15px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+
+.sessions {
+  margin-top: 2rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+.litagtimeline {
+  padding-bottom: 1.5rem;
+  border-left: 1px solid #abaaed;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+.litagtimeline:last-child {
+  border: 0px;
+  padding-bottom: 0;
+}
+.litagtimeline:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid #4e5ed3;
+  box-shadow: 3px 3px 0px #bab5f8;
+  box-shadow: 3px 3px 0px #bab5f8;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: 0px;
+}
+
+.time {
+  color: #2a2839;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+
+}
+@media screen and (min-width: 601px) {
+  .time {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .time {
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+  }
+}
+
+p {
+  color: #4f4f4f;
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin-top: 0.4rem;
+}
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+#Rewards_fires_heading{
+  text-align: center;
+}
+
+#image_benfites_section{
+  width: 700px;
+  height: 500px;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 800px) {
+  #image_benfites_section{
+      width: 650;
+      height: 450px;
+    }  
+}
+
+@media (max-width: 770px) {
+
+  #image_benfites_section{
+      width: 550px;
+      height: 400px;
+    }  
+}
+
+
+@media (max-width: 610px) {
+
+  #image_benfites_section{
+      width: 500px;
+      height: 400px;
+    }  
+}
+
+@media (max-width: 555px) {
+
+  #image_benfites_section{
+      width: 450px;
+      height: 350px;
+    }  
+}
+
+
+@media (max-width: 500px) {
+
+  #image_benfites_section{
+      width: 400px;
+      height: 300px;
+    }  
+}
+
+@media (max-width: 470px) {
+
+  #image_benfites_section{
+      width: 350px;
+      height: 250px;
+    }  
+}
+
+@media (max-width: 400px) {
+
+  #image_benfites_section{
+      width: 300px;
+      height: 220px;
+    }  
+}
+
+
+/*---------market opportunity start css --------------------------------------*/
+
+
+#first_section {
+  margin-top: 72px;
+  height: 400px;
+  width: 100%;
+  background: linear-gradient(to right, #4c008256, #7A33A8, #C29EDB); /* Blue gradient */
+  position: relative;
+  overflow: hidden;
+}
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px; /* Adjust logo size */
+  height: auto;
+}
+.content {
+  margin-top: 100px; /* Adjust based on logo height */
+  padding: 20px;
+  color: white;
+}
+.heading {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.animated-text {
+  display: inline-block;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Start from left */
+  animation: fadeInLeft 1s forwards; /* Animation to play once */
+  font-size: 20px;
+}
+@keyframes fadeInLeft {
+  to {
+      opacity: 1; /* Fully visible */
+      transform: translateX(0); /* Move to original position */
+  }
+}
+.bottom-logo {
+  position: absolute;
+  bottom: 0px; /* Adjust this value to position the logo */
+  right: 10px; /* Position logo to the right */
+  width: 200px; /* Adjust logo size */
+  height: auto;
+}
+.top-bottom-logo {
+  position: absolute;
+  bottom: 70px; /* Position this logo above the bottom logo */
+  left: 300px; /* Align with the bottom logo */
+  width: 100px !important; /* Adjust logo size */
+  height: auto;
+}
+@media (max-width: 850px) {
+  .bottom-logo {
+    width: 120px;
+  }
+
+  
+}
+
+@media (max-width: 800px) {
+  .bottom-logo {
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 790px) {
+  .animated-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .heading {
+    font-size: 25px;
+  }
+    .top-bottom-logo {
+    bottom: 60px;
+    left: 270px;
+  }
+}
+
+@media (max-width: 433px) {
+
+  .heading {
+    font-size: 23px;
+  }
+   
+
+  .animated-text {
+    font-size: 13px;
+  }
+}
+
+
+
+/* section 2 ------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------*/
+
+/*body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  margin: 0;
+  padding: 20px;
+}*/
+#section2 {
+  font-family: 'Times New Roman', Times, serif;
+  border: 2px solid #333;
+  padding: 20px;
+  margin: 0px auto;
+  max-width: 100%; /* Responsive max width */
+  /*background: white; /* Background for the container */
+  border: hidden;
+  color: black;
+  background-color:#e6e6e6;
+}
+.section { 
+  padding: 5px;
+  margin: 20px 0;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+  transform: translateX(-100px); /* Start from the left */
+}
+.section.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+p { 
+  font-size: 18px;
+}
+
+#Rewards_fires_heading{
+  text-align: center;
+}
+
+#image_benfites_section{
+  width: 700px;
+  height: 500px;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 800px) {
+  #image_benfites_section{
+      width: 650;
+      height: 450px;
+    }  
+}
+
+@media (max-width: 770px) {
+
+  #image_benfites_section{
+      width: 550px;
+      height: 400px;
+    }  
+}
+
+
+@media (max-width: 610px) {
+
+  #image_benfites_section{
+      width: 500px;
+      height: 400px;
+    }  
+}
+
+@media (max-width: 555px) {
+
+  #image_benfites_section{
+      width: 450px;
+      height: 350px;
+    }  
+}
+
+
+@media (max-width: 500px) {
+
+  #image_benfites_section{
+      width: 400px;
+      height: 300px;
+    }  
+}
+
+@media (max-width: 470px) {
+
+  #image_benfites_section{
+      width: 350px;
+      height: 250px;
+    }  
+}
+
+@media (max-width: 400px) {
+
+  #image_benfites_section{
+      width: 300px;
+      height: 220px;
+    }  
+}
+
+
+/* ----body hearder start -------------------*/
+.bodyheader{
+  border: 1px solid black;
+  height: 200px;
+  margin-top: 72px;
+  border: hidden;
+  text-align: center;
+  padding-top: 15px;
+
+}
+.bodyheadertext{
+  color: black;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+ 
+
+#compareable_projectbg{
+
+  background: linear-gradient(to right, white, #d3d3d3, rgba(245, 222, 179, 0.664)); /* Gradient background */
+}
+
+#bgshortversion{
+ 
+  background: linear-gradient(to right, rgb(236, 236, 236), #d3d3d3, rgba(245, 222, 179, 0.664)); 
+}
+
+#bgundes{
+  background: linear-gradient(to right, rgb(226, 223, 223), #d3d3d3ad, rgba(245, 222, 179, 0.39)); 
+
+}
+#bgourlegal{
+  background: linear-gradient(to right, white, #d3d3d3, rgba(245, 222, 179, 0.664));
+
+}
+
+#bgroletoken{
+
+  background: linear-gradient(to right, rgb(226, 223, 223), #d3d3d3ad, rgba(245, 222, 179, 0.39)); 
+
+}
+
+#bgilegalcom{
+  background: linear-gradient(to right, rgb(226, 223, 223), #d3d3d3ad, rgba(245, 222, 179, 0.39)); 
+
+}
+
+#thelegalbg{
+  background: linear-gradient(to right, white, #d3d3d3, rgba(245, 222, 179, 0.664));
+}
+
+#bgourleverage{
+  background: linear-gradient(to right, rgb(226, 223, 223), #d3d3d3ad, rgba(245, 222, 179, 0.39)); 
+}
+
+#bgexpected{
+  background: linear-gradient(to right, white, #d3d3d3, rgba(245, 222, 179, 0.664));
+
+}
+
+#bgmarkettest{
+ 
+  background: linear-gradient(to right, rgb(236, 236, 236), #d3d3d3, rgba(245, 222, 179, 0.664)); 
+}
+
+#bgmarketoper{
+  background: linear-gradient(to right, white, #d3d3d3, rgba(245, 222, 179, 0.664));
+}
+
+#bgteam{
+   
+  background: linear-gradient(to right, rgb(236, 236, 236), #d3d3d3, rgba(245, 222, 179, 0.664)); 
+}
+
+#bgthesolution{
+  background: linear-gradient(to right, white, #d3d3d3, rgba(245, 222, 179, 0.664));
+}
+
+#bgproblem{
+ 
+  background: linear-gradient(to right, rgb(236, 236, 236), #d3d3d3, rgba(245, 222, 179, 0.664)); 
+}
+
+
+#bgstory{
+  background: linear-gradient(to right, white, #d3d3d3, rgba(245, 222, 179, 0.664));
+}
+
+#riskmangement{
+  
+  background: linear-gradient(to right, rgb(236, 236, 236), #d3d3d3, rgba(245, 222, 179, 0.664)); 
+}
+
+#bgadventage{
+  background: linear-gradient(to right, white, #d3d3d3, rgba(245, 222, 179, 0.664));
+}
+
+
+
+
+/* section 2 ------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------*/
+
+/*body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  margin: 0;
+  padding: 20px;
+}*/
+#section2 {
+  font-family: 'Times New Roman', Times, serif;
+  border: 2px solid #333;
+  padding: 40px;
+  margin: 0px auto;
+  max-width: 100%; /* Responsive max width */
+  /*background: white; /* Background for the container */
+  border: hidden;
+  color: black;
+  background-color:#e6e6e6;
+}
+.sectiontext { 
+  padding: 5px;
+  margin: 20px 0;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+  transform: translateX(-100px); /* Start from the left */
+}
+.sectiontext.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+p { 
+  font-size: 18px;
+}
+
+
+    
+    /* Scrollbar ko style karein */
+::-webkit-scrollbar {
+  width: 10px; /* Horizontal scroll ke liye height bhi set kar sakte hain */
+  height: 10px;
+}
+
+/* Scrollbar ki background */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track ka color */
+  border-radius: 10px; /* Track ka radius */
+}
+
+/* Scrollbar ka thumb (jo move karta hai) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb ka color */
+  border-radius: 10px; /* Thumb ka radius */
+}
+
+/* Hover par thumb ka color badalna */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+

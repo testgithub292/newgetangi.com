@@ -1,0 +1,775 @@
+.navbarcolorstyle{
+
+    background-color: whitesmoke;
+  }
+  #navbarcolorstyle{
+  background-color: whitesmoke;
+  } 
+  
+  #textstyle{
+    font-size: 16px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #accountDropdown{
+    font-size: 16px;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  }
+  #servicesDropdown{
+    font-size: 16px;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  }
+  #navbarDropdown{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+  #offcanvasNavbarDropdown{
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #dropdownitemcolor{
+    background-color: whitesmoke;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+  }
+  .navbar-toggler-icon{
+    background-color: aliceblue;
+    border-radius: 3px;
+    
+  }
+  
+  .nav-link.dropdown-toggle::after {
+      display: none;
+  }
+
+
+  .bytokenbtnnav2{
+    display: none !important;
+ }
+
+.bytokenbtnnav{
+  margin-right: 15px !important;
+  font-family: 'Times New Roman', Times, serif;
+}
+  #contact_bt_css{
+    height: fit-content;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+    --color: black;
+  font-family: 'Times New Roman', Times, serif;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid #ffd700;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: var(--color);
+  }
+  #contact_bt_css:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  #contact_bt_css:hover {
+    color: white;
+    border: 2px solid #32cd32;
+  }
+  
+  #contact_bt_css:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  #contact_bt_css:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  #contact_bt_css:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+  }
+  
+ 
+  
+  @media (max-width: 1200px) {
+  
+      .navbar-toggler {
+         color: black !important;
+        }
+
+        .bytokenbtnnav2{
+          display: block !important;
+          margin-top: 0px !important;
+      }
+  }
+
+  /* Hide the submenu by default */
+  .dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: -5px;
+  }
+  
+  /* Show the submenu on hover */
+  .dropdown-submenu:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Optional styling */
+  .dropdown-submenu {
+    position: relative;
+  }
+  body{
+    background-color: #dfd5cd !important;
+  }
+  
+  /*--------------------------------------------------------------------------*/
+
+
+
+
+
+  /*---Footer css--------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------*/
+.site-footer {
+    background-color: whitesmoke;
+    color: black;
+    padding: 40px 0 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-links, .footer-contact {
+    flex-basis: 45%;
+  }
+  
+  .footer-links h3, .footer-contact h3 {
+    margin-bottom: 20px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: black;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    opacity: 0.8;
+  }
+  
+  .footer-contact form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-contact input,
+  .footer-contact textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .footer-contact button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-contact button:hover {
+    background-color: rgba(0, 0, 0, 0.671);
+    color: whitesmoke;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icon {
+    color: black  ;
+    font-size: 24px;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(53, 48, 48, 0.1);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background-color: rgba(0, 0, 0, 0.295);
+  }
+  
+  .footer-legal {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .legal-link {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .legal-link:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+    
+    .footer-links, .footer-contact {
+      flex-basis: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .footer-social, .footer-legal {
+      justify-content: center;
+    }
+  }
+  
+  .social-icon.fa-tiktok {
+    font-size: 22px; 
+  }
+  /* top icon css--------------------------------------------------------------------
+  -----------------------------------------------------------------------------------------*/
+  
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  
+  #scrollTopBtn:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  #scrollTopBtn i {
+    font-size: 30px;
+  }
+  
+  
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+  }
+  
+  #scrollTopBtn:before,
+  #scrollTopBtn:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 7px;
+  }
+  
+  #scrollTopBtn:before {
+    border: 4px solid #f0eeef;
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+      transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+  }
+  
+  #scrollTopBtn:after {
+    border: 4px solid #96daf0;
+    transform: scale(1.3);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+      transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+  }
+  
+  #scrollTopBtn:hover:before,
+  #scrollTopBtn:focus:before {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+      transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  #scrollTopBtn:hover:after,
+  #scrollTopBtn:focus:after {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+      transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+  }
+  
+  #scrollTopBtn-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  #scrollTopBtn-elem {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 17px 18px 0 18px;
+    transform: rotate(180deg);
+    fill: #f0eeef;
+  }
+  
+  #scrollTopBtn:hover #scrollTopBtn-box,
+  #scrollTopBtn:focus #scrollTopBtn-box {
+    transition: 0.4s;
+    transform: translateX(-56px);
+  }
+  
+
+
+  /*---------by token css ------------------------*/
+.contact_bt_css{
+  height: fit-content;
+ padding-top: 3px;
+ padding-bottom: 3px;
+ padding-left: 10px;
+ padding-right: 10px;
+  margin-right: 20px;
+  margin-top: 0px;
+  --color: black;
+
+display: inline-block;
+position: relative;
+cursor: pointer;
+overflow: hidden;
+border: 2px solid #ffd700;
+transition: color 0.5s;
+z-index: 1;
+font-size: 17px;
+border-radius: 20px;
+font-weight: 500;
+color: var(--color);
+}
+.contact_bt_css:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.contact_bt_css:hover {
+  color: white;
+  border: 2px solid #32cd32;
+}
+
+.contact_bt_css:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.contact_bt_css:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.contact_bt_css:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
+
+
+/* styles.css */
+#first_sectionps {
+  margin-top: 72px;
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(to right, white, #d3d3d3, wheat); /* Gradient background */
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  left: 10px; /* Adjust as needed */
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 1; /* Content above images */
+  color: black; /* Text color changed to white */
+  font-size: 22px; /* Increased text size */
+}
+
+h1 {
+  margin: 0; /* Remove default margin */
+}
+
+.shortcontentps {
+  font-size: 20px;
+  opacity: 0; /* Start hidden */
+  animation: slideIn 0.5s forwards; /* Slide in animation for paragraph only */
+}
+
+/* Animation for text sliding in */
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%); /* Start from left */
+      opacity: 0; /* Start hidden */
+  }
+  100% {
+      transform: translateX(0); /* End at original position */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+.images {
+  position: absolute;
+  z-index: 0; /* Images behind content */
+}
+
+.logo {
+  width: 100px;
+  border-radius: 50%; /* Makes images circular */
+  transition: all 0.5s ease; /* Transition effect for both logos */
+  
+  filter: brightness(0) opacity(0.5);
+}
+
+
+/* Positioning logo1 at a fixed position */
+.logo1 {
+  position: absolute;
+  top: 30%; /* Adjust as needed */
+  left: 20%; /* Adjust as needed */
+  z-index: 2; /* Ensure logo1 is above the text */
+  animation: rotate 5s linear infinite; /* Rotating animation for logo1 */
+}
+
+/* Logo2 will move with mouse */
+.logo2 {
+  position: absolute;
+  z-index: 0; /* Ensure logo2 is below logo1 and text */
+  animation: rotate 5s linear infinite; /* Rotating animation for logo2 */
+}
+
+/* Keyframes for rotating images */
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 850px) {
+
+  .shortcontentps{
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .shortcontentps{
+    font-size: 12px;
+  }
+}
+
+
+
+/*------------------------------*/
+/*-----profile card-------------------*/
+
+#linkedin-icon {
+  color: white; /* Sets the icon color to white */
+  text-decoration: none; /* Removes underline from the link */
+  background-color: white;
+  border-radius: 25px;
+ /* margin: 5px 0px;*/
+}
+
+
+    .profile-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+    }
+    .card {
+      background-color: azure;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 20px;
+      width: 300px;
+      max-width: 300px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      box-sizing: border-box;
+      height: 300px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .profile-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      transition: transform 0.2s;
+    }
+    .card:hover .profile-image {
+      transform: translateX(-50%) scale(1.1);
+    }
+    .card h3, .card p {
+      margin-top: 120px;
+    }
+    
+    .bodyprofilecard {
+      font-family: tahoma;
+      height: 400px;
+      background-image: url(https://picsum.photos/g/3000/2000);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .our-team {
+      padding: 30px 0 40px;
+      margin-bottom: 30px;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .our-team .picture {
+      text-align: center;
+      display: inline-block;
+      height: 130px;
+      width: 130px;
+      margin-bottom: 50px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .our-team .picture::before {
+      content: "";
+      width: 100%;
+      height: 0;
+      border-radius: 50%;
+      background-color: #1369ce;
+      position: absolute;
+      bottom: 135%;
+      right: 0;
+      left: 0;
+      opacity: 0.9;
+      transform: scale(3);
+      transition: all 0.3s linear 0s;
+    }
+    
+    .our-team .picture::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #1369ce;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    
+    .our-team:hover .picture::before {
+      height: 100%;
+    }
+
+
+    .our-team .picture img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      transform: scale(1);
+      transition: all 0.9s ease 0s;
+    }
+
+    .our-team:hover .picture img {
+      box-shadow: 0 0 0 14px #f7f5ec;
+      transform: scale(0.7);
+    }
+    
+    .our-team .title {
+      display: block !important;
+      font-size: 20px;
+      color: #4e5052;
+      text-transform: capitalize;
+      margin-top: 5px;
+    }
+
+    .our-team .social {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background-color: #1369ce;
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      transition: all 0.5s ease 0s;
+    }
+
+    .our-team:hover .social {
+      bottom: 0;
+    }
+
+    .our-team .social li {
+      display: inline-block;
+    }
+
+    .our-team .social li a {
+      display: block;
+    
+      font-size: 17px;
+      color: white;
+      transition: all 0.3s ease 0s;
+      text-decoration: none;
+    }
+
+    .our-team .social li a:hover {
+      color: #1369ce;
+    }
+    @media (max-width: 768px) {
+      .card {
+        width: calc(50% - 20px);
+      }
+    }
+    @media (max-width: 480px) {
+
+      .profile-cards{
+        display: flex;
+        justify-content: center;
+      }
+      .card {
+        width: 100%;
+      }
+    }
+
+
+
+    
+    /* Scrollbar ko style karein */
+::-webkit-scrollbar {
+  width: 10px; /* Horizontal scroll ke liye height bhi set kar sakte hain */
+  height: 10px;
+}
+
+/* Scrollbar ki background */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track ka color */
+  border-radius: 10px; /* Track ka radius */
+}
+
+/* Scrollbar ka thumb (jo move karta hai) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb ka color */
+  border-radius: 10px; /* Thumb ka radius */
+}
+
+/* Hover par thumb ka color badalna */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
