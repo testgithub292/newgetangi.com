@@ -208,21 +208,6 @@ cards.forEach(card => scrollobserver.observe(card));
 
 //--------------------------------------------------------------------
 
-const wcards = document.querySelectorAll('.menu_item');
-
-const withoutscrollobserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show'); // Remove for repeated animations
-        }
-    });
-}, {
-    threshold: 0.5 // 50% of the card must be visible
-});
-
-wcards.forEach(card => withoutscrollobserver.observe(card));
 
 
 /*------------------------------------------------------------*/
@@ -524,3 +509,46 @@ function animateProgressCircle(start, end, duration) {
         percentageText.textContent = `${Math.round(current)} B`;
     }, 16);
 }
+
+
+/*-----------------------------------------------------------------------------
+---------------------------------------------------------------------------------*/
+function toggleProblemContent(id) {
+    const allContent = document.querySelectorAll('.problem-hidden-content');
+    allContent.forEach(content => {
+      if (content.id !== id) {
+        content.style.display = 'none';
+      }
+    });
+
+    const currentContent = document.getElementById(id);
+    if (currentContent.style.display === 'none' || currentContent.style.display === '') {
+      currentContent.style.display = 'block';
+    } else {
+      currentContent.style.display = 'none';
+    }
+  }
+
+  // Close all content when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('#problem-card')) {
+      document.querySelectorAll('.problem-hidden-content').forEach(content => {
+        content.style.display = 'none';
+      });
+    }
+  });
+
+  // Scroll Animation
+  const observersection2 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  });
+
+  // Observe the card for animation
+  observersection2.observe(document.getElementById('problem-card-inner'));
+
