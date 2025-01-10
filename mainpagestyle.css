@@ -296,8 +296,8 @@
   }
   @media (max-width: 580px) {
     .containerfirstlineanimation {
-      margin-top: 100px;
-      font-size: 50px;
+      padding-top: 30px;
+      font-size: 55px;
     }
     .full-line {
       top: 100px;
@@ -312,8 +312,8 @@
  
   @media (max-width: 500px) {
     .containerfirstlineanimation {
-      margin-top: 60px;
-      font-size: 40px;
+      padding-top: 20px;
+      font-size: 50px;
     }
     .full-line {
       top: 80px;
@@ -329,8 +329,8 @@
 
     @media (max-width: 430px) {
       .containerfirstlineanimation {
-        margin-top: 50px;
-        font-size: 30px;
+        padding-top: 20px;
+        font-size: 40px;
       }
     .full-line {
       top: 60px;
@@ -356,11 +356,11 @@
   }
   @media (max-width: 400px) {
     .containerfirstlineanimation {
-      margin-top: 50px;
-      font-size: 30px;
+      padding-top: 20px;
+      font-size: 35px;
     }
     .full-line {
-      top: 50px;
+      top: 80px;
       font-size: 17px;
       line-height: 25px;
     }
@@ -389,8 +389,8 @@
  
    @media (max-width: 375px) {
     .containerfirstlineanimation {
-      margin-top: 50px;
-      font-size: 25px;
+      padding-top: 20px;
+      font-size: 30px;
     }
     .full-line {
       font-size: 15px;
