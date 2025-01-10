@@ -902,3 +902,109 @@ function toggleProblemContent(id) {
            }, { once: true }); // Use `once` to ensure this is only executed once
          });
        });
+
+       //==================================================-------------------------------------
+
+       // Select the progress bar container, fill, and value text
+const progressBarContainer = document.getElementById('progress-bar-container');
+const progressFill = document.getElementById('progress-fill');
+const progressValue = document.getElementById('progress-value');
+
+let isProgressBarAnimating = false; // Track if animation is running
+
+// Observer to detect when the progress bar enters the viewport
+const observerBar = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting && !isProgressBarAnimating) {
+            isProgressBarAnimating = true; // Lock animation
+            progressBarContainer.classList.add('active'); // Trigger fade-in animation
+            animateProgressBar(0, 70, 2000); // Animate progress bar to 70%
+        } else if (!entry.isIntersecting) {
+            // Reset when out of view
+            isProgressBarAnimating = false; // Allow animation to run again
+            resetProgressBar(); // Reset progress bar state
+        }
+    });
+});
+
+// Observe the progress bar container
+observerBar.observe(progressBarContainer);
+
+// Function to animate the progress bar
+function animateProgressBar(start, end, duration) {
+    let current = start;
+    const increment = (end - start) / (duration / 16); // Smooth increment (16ms per frame)
+    const interval = setInterval(() => {
+        current += increment;
+        if (current >= end) {
+            current = end; // Stop at the target value
+            clearInterval(interval);
+        }
+
+        // Update progress bar width and text
+        progressFill.style.width = `${current}%`;
+        progressValue.textContent = `${Math.round((current / 100) * 100)}%`; // Update token count in %
+    }, 16);
+}
+
+// Function to reset the progress bar
+function resetProgressBar() {
+    progressFill.style.width = '0%'; // Reset width
+    progressValue.textContent = '0%'; // Reset text
+    progressBarContainer.classList.remove('active'); // Reset animation class
+}
+
+
+//=========================================================================================
+
+function toggleClubContent(contentId) {
+  // Hide all content cards
+  document.querySelectorAll('.club-content-card').forEach(content => {
+      content.classList.remove('active');
+  });
+
+  // Show the selected content card
+  const selectedContent = document.getElementById(contentId);
+  if (selectedContent) {
+      selectedContent.classList.add('active');
+  }
+}
+
+// Hide content when clicking outside the card
+document.addEventListener('click', function(event) {
+  const container = document.getElementById('club-container');
+  if (!container.contains(event.target)) {
+      document.querySelectorAll('.club-content-card').forEach(content => {
+          content.classList.remove('active');
+      });
+  }
+});
+
+
+//=========================================================================
+
+const target = 200;
+const countElement = document.getElementById("count");
+
+const startCounter = () => {
+  let count = 0;
+  countElement.textContent = count; // Reset count display
+  const interval = setInterval(() => {
+      if (count < target) {
+          count++;
+          countElement.textContent = count;
+      } else {
+          clearInterval(interval);
+      }
+  }, 20);
+};
+
+const observerelite = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          startCounter();
+      }
+  });
+});
+
+observerelite.observe(document.querySelector('.badge-container'));
