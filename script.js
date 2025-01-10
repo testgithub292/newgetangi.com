@@ -481,3 +481,46 @@ document.addEventListener("DOMContentLoaded", () => {
   
   
  
+
+
+  //--------------------------------------------
+
+  // Select the progress circle and percentage text
+const progressCircle = document.getElementById('progress-circle');
+const percentageText = document.getElementById('percentage');
+
+// Observer to detect when the circle enters the viewport
+const observerCircle = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            progressCircle.classList.add('active'); // Trigger fade-in effect
+            animateProgressCircle(0, 33, 2000); // Animate the progress circle to 33%
+        }
+    });
+});
+
+// Observe the progress circle element
+observerCircle.observe(progressCircle);
+
+// Function to animate the progress circle
+function animateProgressCircle(start, end, duration) {
+    let current = start;
+    const increment = (end - start) / (duration / 16); // Smooth increment (16ms per frame)
+    const interval = setInterval(() => {
+        current += increment;
+        if (current >= end) {
+            current = end;
+            clearInterval(interval);
+        }
+
+        // Update the conic-gradient to reflect progress
+        const progressColor = `conic-gradient(
+            #a74dfc 0% ${current}%,  /* Purple for progress */
+            #e6e6e6 ${current}% 100% /* Gray for remaining */
+        )`;
+        progressCircle.style.background = progressColor;
+
+        // Update the percentage text
+        percentageText.textContent = `${Math.round(current)} B`;
+    }, 16);
+}
