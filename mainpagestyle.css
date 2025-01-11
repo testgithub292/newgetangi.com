@@ -3560,3 +3560,254 @@ body.supply {
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
+/*====================================================================*/
+
+
+
+.marketEntryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.marketEntrySide {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: marketEntryFadeInUp 0.8s ease-out forwards;
+}
+
+.marketEntryArrow {
+  font-size: 48px;
+  text-align: center;
+  line-height: 1.5;
+  color: #333;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: marketEntryFadeInUp 1s ease-out forwards;
+}
+
+.marketEntryBenefits {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.marketEntryBenefit {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.marketEntryPaymentFlow {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.marketEntryStep {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 15px;
+  font-weight: bold;
+  border-left: 4px solid #007bff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: marketEntryFadeInUp 0.8s ease-out forwards;
+}
+
+.marketEntryTransitionText {
+  color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes marketEntryFadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsiveness for mobile devices */
+@media (max-width: 768px) {
+  .marketEntryContainer {
+      gap: 20px;
+  }
+
+  .marketEntrySide {
+      max-width: 100%;
+      padding: 15px;
+  }
+
+  .marketEntryArrow {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 36px;
+  }
+
+  .marketEntryPaymentFlow {
+      gap: 15px;
+  }
+
+  .marketEntryStep {
+      font-size: 14px;
+      padding: 12px;
+  }
+
+  .marketEntryBenefit {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .marketEntryTransitionText {
+      font-size: 16px;
+  }
+
+  .marketEntryContainer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .marketEntrySide {
+      width: 100%;
+      max-width: 100%;
+  }
+
+  .marketEntryArrow {
+      margin: 20px 0;
+      font-size: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marketEntryArrow {
+      font-size: 32px;
+  }
+
+  .marketEntrySide h2 {
+      font-size: 18px;
+  }
+
+  .marketEntryPaymentFlow {
+      gap: 10px;
+  }
+
+  .marketEntryStep {
+      font-size: 12px;
+      padding: 10px;
+  }
+
+  .marketEntryBenefit {
+      font-size: 12px;
+      padding: 6px;
+  }
+
+  .marketEntryTransitionText {
+      font-size: 14px;
+  }
+}
+
+
+
+/*==========================================================================*/
+
+body.limit-body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  height: 100vh;
+}
+.container-limit {
+    background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+h2.limit-h2 {
+  text-align: center;
+  color: #333;
+  font-size: 17px;
+}
+table.limit-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+table.limit-table th, table.limit-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInRow 1s ease-in-out forwards;
+}
+table.limit-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+.highlight-limit {
+  color: #ff5733;
+  font-weight: bold;
+}
+
+/* Keyframes for table fade-in effect */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Keyframes for each row fade-in with staggered delays */
+@keyframes fadeInRow {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Staggering the animation delays for rows */
+tr:nth-child(1) td, tr:nth-child(1) th {
+  animation-delay: 0s;
+}
+tr:nth-child(2) td, tr:nth-child(2) th {
+  animation-delay: 0.4s;
+}
+tr:nth-child(3) td, tr:nth-child(3) th {
+  animation-delay: 0.8s;
+}
+tr:nth-child(4) td, tr:nth-child(4) th {
+  animation-delay: 1.2s;
+}
+

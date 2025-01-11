@@ -1068,3 +1068,20 @@ const observerlineanimation = new IntersectionObserver((entries) => {
 lines.forEach(line => {
   observerlineanimation.observe(line);
 });
+
+
+ //==================================================================================
+
+   // Detect when the table is visible on the screen and apply the fade-in animation
+   window.addEventListener('scroll', function() {
+    const table = document.querySelector('.limit-table');
+    const tablePosition = table.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    // If the table is in view, add the animation class
+    if (tablePosition < screenPosition) {
+        table.style.opacity = 1;  // Ensure visibility when it comes into view
+    }
+});
+
+
