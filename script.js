@@ -1044,3 +1044,27 @@ const observerelite = new IntersectionObserver((entries) => {
 });
 
 observerelite.observe(document.querySelector('.badge-container'));
+
+
+//==========================================================================
+
+// Select all lines
+const lines = document.querySelectorAll('.line');
+
+// Observe visibility of each line
+const observerlineanimation = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Add the animation class when visible
+      entry.target.classList.add('visible');
+    } else {
+      // Remove the animation class when out of view
+      entry.target.classList.remove('visible');
+    }
+  });
+});
+
+// Attach observer to each line
+lines.forEach(line => {
+  observerlineanimation.observe(line);
+});
