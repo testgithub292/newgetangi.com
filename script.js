@@ -677,7 +677,7 @@ function animateProgressCircle(start, end, duration) {
 
 
 /*-----------------------------------------------------------------------------
----------------------------------------------------------------------------------*/
+---------------------------------------------------------------------------------
 function toggleProblemContent(id) {
     const allContent = document.querySelectorAll('.problem-hidden-content');
     allContent.forEach(content => {
@@ -717,7 +717,63 @@ function toggleProblemContent(id) {
   // Observe the card for animation
   observersection2.observe(document.getElementById('problem-card-inner'));
 
+*/
 
+function toggleProblemContent(cardContainer, id) {
+  const allContent = cardContainer.querySelectorAll('.problem-hidden-content');
+  allContent.forEach(content => {
+    if (content.id !== id) {
+      content.style.display = 'none';
+    }
+  });
+
+  const currentContent = cardContainer.querySelector(`#${id}`);
+  if (currentContent.style.display === 'none' || currentContent.style.display === '') {
+    currentContent.style.display = 'block';
+  } else {
+    currentContent.style.display = 'none';
+  }
+}
+
+// Apply event listeners dynamically for each card
+document.querySelectorAll('.container').forEach(card => {
+  const buttons = card.querySelectorAll('.problem-btn-custom');
+  buttons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      const id = event.target.getAttribute('onclick').match(/'([^']+)'/)[1];
+      toggleProblemContent(card, id);
+      event.stopPropagation(); // Stop click from propagating to document
+    });
+  });
+});
+
+// Global click listener to close dropdowns
+document.addEventListener('click', (event) => {
+  document.querySelectorAll('.container').forEach(card => {
+    if (!card.contains(event.target)) {
+      const hiddenContents = card.querySelectorAll('.problem-hidden-content');
+      hiddenContents.forEach(content => {
+        content.style.display = 'none';
+      });
+    }
+  });
+});
+
+// Scroll Animation
+const observermetter = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+});
+
+// Observe all cards
+document.querySelectorAll('.problem-content-container').forEach(cardInner => {
+  observermetter.observe(cardInner);
+});
 
   //---------------**********************************************************
 
