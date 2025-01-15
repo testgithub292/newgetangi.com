@@ -379,6 +379,7 @@
       .containerfirstlineanimation {
         padding-top: 20px;
         font-size: 40px;
+        padding-left: 15px;
       }
     .full-line {
       top: 60px;
@@ -405,7 +406,8 @@
   @media (max-width: 400px) {
     .containerfirstlineanimation {
       padding-top: 20px;
-      font-size: 35px;
+      font-size: 30px;
+      padding-left: 15px;
     }
     .full-line {
       top: 80px;
@@ -438,7 +440,8 @@
    @media (max-width: 375px) {
     .containerfirstlineanimation {
       padding-top: 20px;
-      font-size: 30px;
+      font-size: 25px;
+      padding-left: 15px;
     }
     .full-line {
       font-size: 15px;
