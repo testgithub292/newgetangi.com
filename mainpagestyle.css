@@ -3389,6 +3389,28 @@ body.supply {
   padding-top: 70px;
 }
 
+#section10CardsWrapper3 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  touch-action: pan-y;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+#section10CardsContainer3 {
+  display: flex;
+  gap: 50px;
+  padding-left: 20px;
+  width: max-content;
+  padding-top: 70px;
+}
+
 .section10Card {
   flex: 0 0 auto;
   width: 350px;

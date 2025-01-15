@@ -979,6 +979,8 @@ document.querySelectorAll('.problem-content-container').forEach(cardInner => {
 
 const section10CardsContainer1 = document.getElementById("section10CardsContainer1");
 const section10CardsContainer2 = document.getElementById("section10CardsContainer2");
+const section10CardsContainer3 = document.getElementById("section10CardsContainer3");
+
 
 gsap.to(section10CardsContainer1, {
   x: () => -(section10CardsContainer1.scrollWidth - window.innerWidth),
@@ -998,6 +1000,19 @@ gsap.to(section10CardsContainer2, {
   ease: "none",
   scrollTrigger: {
     trigger: "#section10CardsWrapper2",
+    start: "top top",
+    end: () => `+=${section10CardsContainer2.scrollWidth}`,
+    pin: true,
+    scrub: 0.5,
+    invalidateOnRefresh: true,
+  },
+});
+
+gsap.to(section10CardsContainer3, {
+  x: () => -(section10CardsContainer2.scrollWidth - window.innerWidth),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#section10CardsWrapper3",
     start: "top top",
     end: () => `+=${section10CardsContainer2.scrollWidth}`,
     pin: true,
