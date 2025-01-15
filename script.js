@@ -955,7 +955,7 @@ document.querySelectorAll('.problem-content-container').forEach(cardInner => {
 
      
 
-     /*------------------------------------------------------------*/
+     /*------------------------------------------------------------
 
      gsap.registerPlugin(ScrollTrigger);
 
@@ -972,7 +972,40 @@ document.querySelectorAll('.problem-content-container').forEach(cardInner => {
          scrub: 0.5, // Smooth scrolling
          invalidateOnRefresh: true, // Adjusts on resize
        },
-     });
+     });*/
+
+
+     gsap.registerPlugin(ScrollTrigger);
+
+const section10CardsContainer1 = document.getElementById("section10CardsContainer1");
+const section10CardsContainer2 = document.getElementById("section10CardsContainer2");
+
+gsap.to(section10CardsContainer1, {
+  x: () => -(section10CardsContainer1.scrollWidth - window.innerWidth),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#section10CardsWrapper1",
+    start: "top top",
+    end: () => `+=${section10CardsContainer1.scrollWidth}`,
+    pin: true,
+    scrub: 0.5,
+    invalidateOnRefresh: true,
+  },
+});
+
+gsap.to(section10CardsContainer2, {
+  x: () => -(section10CardsContainer2.scrollWidth - window.innerWidth),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#section10CardsWrapper2",
+    start: "top top",
+    end: () => `+=${section10CardsContainer2.scrollWidth}`,
+    pin: true,
+    scrub: 0.5,
+    invalidateOnRefresh: true,
+  },
+});
+
  
      //------------------------------------------------------------------------------
      //------------------------------------------------------------------------------
