@@ -3382,7 +3382,7 @@ body.supply {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-
+  background-color: #f8f8f8;
 }
 
 #section10CardsWrapper1 {
@@ -3394,7 +3394,7 @@ body.supply {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
+   
   padding: 20px 0;
   box-sizing: border-box;
 }
