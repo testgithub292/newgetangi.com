@@ -1052,12 +1052,12 @@ gsap.to(section10CardsContainer2, {
 });
 
 gsap.to(section10CardsContainer3, {
-  x: () => -(section10CardsContainer2.scrollWidth - window.innerWidth),
+  x: () => -(section10CardsContainer3.scrollWidth - window.innerWidth),
   ease: "none",
   scrollTrigger: {
     trigger: "#section10CardsWrapper3",
     start: "top top",
-    end: () => `+=${section10CardsContainer2.scrollWidth}`,
+    end: () => `+=${section10CardsContainer3.scrollWidth}`,
     pin: true,
     scrub: 0.5,
     invalidateOnRefresh: true,
