@@ -3093,9 +3093,7 @@ body.supply {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  body {
-      padding: 10px;
-  }
+ 
 
   .card-outer {
       margin: 10px;
