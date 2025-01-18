@@ -1399,7 +1399,9 @@ body {
   box-sizing: border-box;
 }*/
 body {
-  background-color: hsla(0, 0%, 90%, 0.726) !important;
+ /* background-color: hsla(0, 0%, 90%, 0.726) !important;*/
+  background-color: #150d17 !important;
+
 }
 
 
