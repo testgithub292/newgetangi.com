@@ -655,6 +655,9 @@
       font-family: 'Times New Roman', Times, serif !important;
       font-size: 18px;
       color: black;
+      text-align: justify;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
     }
     .modal-footer{
       background-color: white !important;
@@ -859,6 +862,7 @@ body {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1.5s ease-in-out;
+
 }
 
 .problem-content-container.visible {
@@ -1399,9 +1403,8 @@ body {
   box-sizing: border-box;
 }*/
 body {
- /* background-color: hsla(0, 0%, 90%, 0.726) !important;*/
-  background-color: #150d17 !important;
-
+  background-color: hsla(0, 0%, 90%, 0.726) !important;
+ 
 }
 
 
@@ -1637,6 +1640,7 @@ body {
   margin-left: 20px;
   font-family: 'Times New Roman', Times, serif;
   animation: fadeInRight 1s ease-out forwards 0.5s;
+  text-align: justify;
 }
 
 @keyframes fadeInRight {
@@ -1948,8 +1952,12 @@ hr {
 
 .menu_text p {
   margin: 0 0 24px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
+  text-align: justify;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .menu_text p:last-child {
@@ -2232,6 +2240,7 @@ body.supply {
   min-width: 200px;
   margin-right: 20px;
   font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
 }
 
 .text-content-invest h2 {
@@ -2281,6 +2290,7 @@ body.supply {
   margin-top: 10px;
   padding: 15px;
   animation: fadeInDropdown 0.5s ease-in-out;
+  text-align: justify;
 }
 
 @keyframes fadeInDropdown {
@@ -2526,6 +2536,7 @@ body.supply {
   line-height: 1.8;
   font-size: 1.1rem;
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 /* Hidden Content Styling */
@@ -2534,6 +2545,7 @@ body.supply {
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.6s ease, opacity 0.6s ease;
+  text-align: justify;
 }
 .hidden-content-investor-gain.visible-investor-gain {
   max-height: 1500px;
@@ -3403,7 +3415,7 @@ body.supply {
 #section10CardsContainer1 {
   display: flex;
   gap: 50px;
-  padding-left: 20px;
+  padding-left: 10px;
   width: max-content;
   padding-top: 70px;
 }
@@ -3493,18 +3505,21 @@ body.supply {
 .section10p{
   font-size: 15px;
   font-family: 'Times New Roman', Times, serif;
-  text-align: center;
+  text-align: justify;
+  padding: 10px;
 }
 
 .section10pbult{
   font-size: 15px;
   padding-right: 5px;
   font-family: 'Times New Roman', Times, serif;
-  text-align: start !important;
+  text-align: left !important;
+
 }
 
 .section10psecond{
   text-align: center;
+ 
 }
 
 .modern-linksection10 {
